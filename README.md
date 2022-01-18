@@ -1,1 +1,1 @@
-# msa
+# cloud-management-platform
