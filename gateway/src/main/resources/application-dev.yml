@@ -1,0 +1,80 @@
+spring:
+  config:
+    activate:
+      on-profile:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "https://admin.devcmp.or.kr"
+              - "https://dashboard.admin.devcmp.or.kr"
+              - "https://contrabass.dev.okestro.cld"
+              - "https://www.devcmp.or.kr"
+            allowedMethods:
+              - POST
+              - GET
+              - PUT
+              - OPTIONS
+              - DELETE
+            allowedHeaders:
+              - Context-Type
+              - Content-Type
+              - Accept
+              - X-Requested-With
+              - remember-me
+              - Content-Disposition
+              - Authorization
+              - ssoKey
+              - session
+              - newToken
+              - access-token
+              - Access-Control-Expose-Headers
+            allow-credentials: true
+      routes:
+        - id: admin-api
+          uri: http://svc-admin-api:18080/
+          predicates:
+            - Path=/admin/api/**
+        #          filters:
+        #            - Authorization
+        #              args:
+        #                preFilter: true
+        #                postFilter: true
+        - id: user-api
+          uri: http://svc-user-api:8081/
+          predicates:
+            - Path=/user/api/**
+        - id: dashboard-api
+          uri: http://svc-dashboard-api:18090/
+          predicates:/Users/gyujinan/Workspace/okestro/cmp-helm/values.yaml
+            - Path=/dashboard/api/**
+
+  datasource:
+    url: jdbc:mariadb://100.0.0.207:3306
+    username: portal
+    password: portal
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  sql:
+    init:
+      mode: always
+
+
+logging:
+  level:
+    root: debug
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
