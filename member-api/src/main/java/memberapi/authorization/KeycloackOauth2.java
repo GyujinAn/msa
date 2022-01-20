@@ -1,11 +1,11 @@
-package memberapi.model.authorization;
+package memberapi.authorization;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.configurationprocessor.json.JSONException;
+import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.MediaType;
 import org.springframework.util.MultiValueMap;
@@ -20,16 +20,16 @@ import java.util.Base64;
 @Slf4j
 public class KeycloackOauth2 extends CmpOauth2 {
 
-    @Value("${cloudplatform.oauth2.keyclock.host}")
+    @Value("${keycloak.host}")
     private String host;
 
-    @Value("${cloudplatform.oauth2.keyclock.realm}")
+    @Value("${keycloak.realm}")
     private String realm;
 
-    @Value("${cloudplatform.oauth2.keyclock.client_id}")
+    @Value("${keycloak.cliend_id}")
     private String clientId;
 
-    @Value("${cloudplatform.oauth2.keyclock.client_secret}")
+    @Value("${keycloak.client_secret}")
     private String clientSecret;
 
     @Autowired

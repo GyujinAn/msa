@@ -1,4 +1,4 @@
-package memberapi.model.authorization;
+package memberapi.authorization;
 
 
 import lombok.Getter;

@@ -17,10 +17,10 @@ public abstract class AbstractMemberService<T extends Member> {
         this.repo = repo;
     }
 
-    T get(Long id){
-        T member = repo.getById(id);
-        return member;
-    };
+//    T get(Long id){
+//        T member = repo.getById(id);
+//        return member;
+//    };
 
     Long save(T member){
         T savedMember = repo.save(member);

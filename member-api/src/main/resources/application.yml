@@ -1,7 +1,10 @@
+server:
+  port: 8001
+
 spring:
   data:
     rest:
-      base-path: /member
+      base-path: /api
   datasource:
     url: jdbc:h2:tcp://localhost/~/workspace/h2/sample-db
     username: sa
@@ -23,3 +26,11 @@ logging:
 
 crypto:
   key: helloworld
+
+keycloak:
+  enabled: true
+  host: ""
+  realm: ""
+  cliend_id: ""
+  client_secret: ""
+

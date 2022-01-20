@@ -20,7 +20,7 @@ public class AdminConcreteService extends AbstractMemberService<Admin> {
 
     @Override
     protected Long putMemberInfo(Admin member) {
-        repo.getById(1L);
+//        repo.getById(1L);
         return null;
     }
 }
