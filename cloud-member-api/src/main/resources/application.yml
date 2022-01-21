@@ -5,6 +5,7 @@ spring:
   data:
     rest:
       base-path: /api
+
   datasource:
     url: jdbc:h2:tcp://localhost/~/workspace/h2/sample-db
     username: sa
@@ -18,14 +19,21 @@ spring:
       hibernate:
 #        show_sql: true
         format_sql: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 568047584227-7g883q08cc2r78qm2qj6u9josms28ged.apps.googleusercontent.com
+            client-secret: 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
+            scope: profile,email
+
 logging:
   level:
     root: debug
     org.hibernate.SQL: debug
     org.hibernate.type: trace
-
-crypto:
-  key: helloworld
 
 keycloak:
   enabled: true
