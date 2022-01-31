@@ -17,7 +17,7 @@
     <modules>
         <module>cloud-service-api</module>
         <module>cloud-member-api</module>
-        <module>gateway</module>
+        <module>cloud-gateway</module>
     </modules>
 
 

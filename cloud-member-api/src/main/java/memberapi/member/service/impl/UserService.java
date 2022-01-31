@@ -1,6 +1,6 @@
 package memberapi.member.service.impl;
 
-import memberapi.member.model.entity.User;
+import memberapi.member.model.entity.UserOld;
 import memberapi.member.repository.UserRepository;
 import memberapi.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
@@ -14,25 +14,25 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class UserService implements MemberService<User> {
+public class UserService implements MemberService<UserOld> {
 
 
     private final UserRepository userRepository;
 
     @Override
-    public User get(Long id) {
+    public UserOld get(Long id) {
         return null;
     }
 
     @Override
-    public Long save(User user) {
+    public Long save(UserOld userOld) {
 
-        User save = userRepository.save(user);
+        UserOld save = userRepository.save(userOld);
         return save.getId();
     }
 
     @Override
-    public Long update(User user) {
+    public Long update(UserOld userOld) {
         return null;
     }
 

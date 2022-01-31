@@ -12,6 +12,6 @@ import javax.persistence.Entity;
 @Entity
 @Getter
 @Setter
-public class User extends Member{
+public class UserOld extends Member{
     private String etc;
 }
