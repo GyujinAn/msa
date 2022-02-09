@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:3306/cloud_management_platform
-    username: agj017
-    password: 1234
+    url: jdbc:mariadb://localhost:3306/cloud_member
+    username: root
+    password:
     driver-class-name: org.mariadb.jdbc.Driver
     initialization-mode: always
 
