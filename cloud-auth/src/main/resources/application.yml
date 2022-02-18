@@ -4,11 +4,11 @@ spring:
     username: root
     password:
     driver-class-name: org.mariadb.jdbc.Driver
-    initialization-mode: always
+#    initialization-mode: always
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
@@ -19,6 +19,12 @@ spring:
 
 server:
   port: 9000
+
+security:
+  user:
+    name: user
+    password: test
+
 
 logging:
   level:

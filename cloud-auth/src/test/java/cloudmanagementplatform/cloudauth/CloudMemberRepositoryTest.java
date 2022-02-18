@@ -1,16 +1,15 @@
-package cloudmanagementplatform.cloudauthorization;
+package cloudmanagementplatform.cloudauth;
 
+import cloudmanagementplatform.cloudauth.member.CloudMember;
+import cloudmanagementplatform.cloudauth.member.CloudMemberRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Collections;
-
-import static org.junit.Assert.*;
 
 /**
  * @author agj017@gmail.com
@@ -28,13 +27,13 @@ public class CloudMemberRepositoryTest {
 
     @Test
     public void createCloudMember(){
-        cloudMemberRepository.save(CloudMember.builder()
-                .uid("user")
-                .password(passwordEncoder.encode("pass"))
-                .name("user")
-                .email("agj017@gmail.com")
-                .roles(Collections.singletonList("ROLE_USER"))
-                .build());
+//        cloudMemberRepository.save(CloudMember.builder()
+//                .uid("user")
+//                .password(passwordEncoder.encode("pass"))
+//                .name("user")
+//                .email("agj017@gmail.com")
+//                .roles(Collections.singletonList("ROLE_USER"))
+//                .build());
 
 
     }

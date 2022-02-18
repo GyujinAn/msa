@@ -1,9 +1,8 @@
-package cloudmanagementplatform.cloudauthorization;
+package cloudmanagementplatform.cloudauth.auth;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -27,7 +26,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     private final PasswordEncoder passwordEncoder;
 
-    private final AuthenticationManager authenticationManager;
+//    private final AuthenticationManager authenticationManager;
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
@@ -41,13 +40,13 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 //                .accessTokenValiditySeconds(30000)
 //                .refreshTokenValiditySeconds(90000);
 
-        clients.jdbc(dataSource).passwordEncoder(passwordEncoder);
-
+//        clients.jdbc(dataSource).passwordEncoder(passwordEncoder);
 
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints.authenticationManager(authenticationManager).tokenStore(new JdbcTokenStore(dataSource));
+//        endpoints.authenticationManager(authenticationManager).
+//                tokenStore(new JdbcTokenStore(dataSource));
     }
 }

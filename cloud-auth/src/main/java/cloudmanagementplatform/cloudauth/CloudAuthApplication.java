@@ -1,13 +1,13 @@
-package cloudmanagementplatform.cloudauthorization;
+package cloudmanagementplatform.cloudauth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CloudAuthorizationApplication {
+public class CloudAuthApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CloudAuthorizationApplication.class, args);
+		SpringApplication.run(CloudAuthApplication.class, args);
 	}
 
 }

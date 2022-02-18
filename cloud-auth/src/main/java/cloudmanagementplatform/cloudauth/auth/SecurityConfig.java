@@ -1,4 +1,4 @@
-package cloudmanagementplatform.cloudauthorization;
+package cloudmanagementplatform.cloudauth.auth;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +20,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final CloudAuthenticationProvider cloudAuthenticationProvider;
+//    private final CloudAuthenticationProvider cloudAuthenticationProvider;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -29,26 +29,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(cloudAuthenticationProvider);
+//        auth.authenticationProvider(cloudAuthenticationProvider);
     }
 
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .csrf().disable()
-                .headers().frameOptions().disable()
-                .and()
-                .authorizeRequests().antMatchers("/oauth/**").permitAll()
-                .and()
-                .formLogin()
-                .and()
-                .httpBasic();
+//        http
+//                .csrf().disable()
+//                .headers().frameOptions().disable()
+//                .and()
+//                .authorizeRequests().antMatchers("/oauth/**").permitAll()
+//                .and()
+//                .formLogin()
+//                .and()
+//                .httpBasic();
     }
 
-    @Bean
-    @Override
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
+//    @Bean
+//    @Override
+//    public AuthenticationManager authenticationManagerBean() throws Exception {
+//        return super.authenticationManagerBean();
+//    }
 }

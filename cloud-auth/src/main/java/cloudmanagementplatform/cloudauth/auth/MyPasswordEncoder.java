@@ -1,4 +1,4 @@
-package cloudmanagementplatform.cloudauthorization;
+package cloudmanagementplatform.cloudauth.auth;
 
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;

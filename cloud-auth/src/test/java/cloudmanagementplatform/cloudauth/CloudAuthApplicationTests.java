@@ -1,10 +1,10 @@
-package cloudmanagementplatform.cloudauthorization;
+package cloudmanagementplatform.cloudauth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CloudAuthorizationApplicationTests {
+class CloudAuthApplicationTests {
 
 	@Test
 	void contextLoads() {
