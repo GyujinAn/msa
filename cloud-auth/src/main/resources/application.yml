@@ -17,26 +17,15 @@ spring:
         format_sql: true
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 
-#  security:
-#    user:
-#      name: user
-#      password: test
-#    oauth2:
-#      client-id: foo
-#      client-secret: bar
+  data:
+    rest:
+      base-path: /api
+      default-page-size: 10
+      max-page-size: 10
+
 
 server:
   port: 9000
-
-#security:
-#  user:
-#    name: user
-#    password: test
-#  oauth2:
-#    client-id: foo
-#    client-secret: bar
-
-
 
 logging:
   level:
