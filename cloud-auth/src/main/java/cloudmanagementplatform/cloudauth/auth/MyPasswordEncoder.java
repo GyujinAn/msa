@@ -1,5 +1,6 @@
 package cloudmanagementplatform.cloudauth.auth;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -9,9 +10,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  */
 public class MyPasswordEncoder {
     public static void main(String[] args) {
-        PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-        System.out.printf("bar : %s\n", passwordEncoder.encode("bar"));
-        System.out.printf("pass : %s\n", passwordEncoder.encode("pass"));
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        System.out.printf("admin : %s\n", passwordEncoder.encode("admin"));
+        System.out.printf("user : %s\n", passwordEncoder.encode("user"));
+
+
     }
 
 }

@@ -14,4 +14,5 @@ import java.util.Optional;
 public interface CloudMemberRepository extends PagingAndSortingRepository<CloudMember, Long> {
 
     Optional<CloudMember> findByLoginId(String loginId);
+
 }

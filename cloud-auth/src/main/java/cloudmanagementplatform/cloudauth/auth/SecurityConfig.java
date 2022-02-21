@@ -1,5 +1,6 @@
 package cloudmanagementplatform.cloudauth.auth;
 
+import cloudmanagementplatform.cloudauth.member.CloudMemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +23,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 //    private final CloudAuthenticationProvider cloudAuthenticationProvider;
 
+    private final CloudMemberService memberService;
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
@@ -30,25 +33,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 //        auth.authenticationProvider(cloudAuthenticationProvider);
+        auth.userDetailsService(memberService).passwordEncoder(passwordEncoder());
+
     }
 
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        http
-//                .csrf().disable()
-//                .headers().frameOptions().disable()
-//                .and()
-//                .authorizeRequests().antMatchers("/oauth/**").permitAll()
-//                .and()
-//                .formLogin()
-//                .and()
-//                .httpBasic();
+        http
+                .csrf().disable()
+                .headers().frameOptions().disable()
+                .and()
+                .authorizeRequests().antMatchers("/**").authenticated()
+                .and()
+                .formLogin()
+                .and()
+                .httpBasic();
     }
 
-//    @Bean
-//    @Override
-//    public AuthenticationManager authenticationManagerBean() throws Exception {
-//        return super.authenticationManagerBean();
-//    }
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 }

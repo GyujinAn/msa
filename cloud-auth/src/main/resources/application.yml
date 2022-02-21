@@ -4,11 +4,11 @@ spring:
     username: root
     password:
     driver-class-name: org.mariadb.jdbc.Driver
-#    initialization-mode: always
+    initialization-mode: always
 
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
@@ -17,13 +17,25 @@ spring:
         format_sql: true
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 
+#  security:
+#    user:
+#      name: user
+#      password: test
+#    oauth2:
+#      client-id: foo
+#      client-secret: bar
+
 server:
   port: 9000
 
-security:
-  user:
-    name: user
-    password: test
+#security:
+#  user:
+#    name: user
+#    password: test
+#  oauth2:
+#    client-id: foo
+#    client-secret: bar
+
 
 
 logging:

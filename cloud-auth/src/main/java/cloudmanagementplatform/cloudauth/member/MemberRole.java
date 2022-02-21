@@ -5,5 +5,5 @@ package cloudmanagementplatform.cloudauth.member;
  * @since 2022/02/18
  */
 public enum MemberRole {
-    ADMIN, USER
+    ROLE_ADMIN, ROLE_USER
 }

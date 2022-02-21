@@ -25,7 +25,7 @@ public class CloudMember{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long userId;
+    private long id;
 
     private String loginId;
 

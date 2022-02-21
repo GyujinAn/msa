@@ -1,3 +1,18 @@
+drop table cloud_member;
+
+create table cloud_member
+(
+      id            bigint not null auto_increment,
+      createdAt     datetime,
+      loginId       varchar(255),
+      loginPw       varchar(255),
+      name          varchar(255),
+      role          varchar(255),
+      status        varchar(255),
+      updatedAt     datetime,
+      primary key (id)
+);
+
 #
 # create table IF NOT EXISTS oauth_client_details
 # (
