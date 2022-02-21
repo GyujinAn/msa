@@ -31,8 +31,8 @@ public class CloudMemberServiceImplTest {
     public void save() {
 
         CloudMember admin = new CloudMember();
-        admin.setLoginId("test");
-        admin.setLoginPw("test");
+        admin.setUsername("test");
+        admin.setPassword("test");
         admin.setName("someone");
         admin.setStatus(MemberStatus.MEMBER);
         admin.setRole(MemberRole.ROLE_ADMIN);
@@ -41,7 +41,7 @@ public class CloudMemberServiceImplTest {
         Optional<CloudMember> byId = cloudMemberRepository.findById(adminId);
         CloudMember cloudMember = byId.orElse(null);
 
-        Assertions.assertEquals("test", cloudMember.getLoginId());
+        Assertions.assertEquals("test", cloudMember.getUsername());
 
 
 

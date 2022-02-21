@@ -1,6 +1,5 @@
 package cloudmanagementplatform.cloudauth.member;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
@@ -13,6 +12,6 @@ import java.util.Optional;
 @RepositoryRestResource(path = "members")
 public interface CloudMemberRepository extends PagingAndSortingRepository<CloudMember, Long> {
 
-    Optional<CloudMember> findByLoginId(String loginId);
+    Optional<CloudMember> findByUsername(String username);
 
 }

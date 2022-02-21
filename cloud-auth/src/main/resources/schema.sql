@@ -3,13 +3,13 @@ drop table cloud_member;
 create table cloud_member
 (
       id            bigint not null auto_increment,
-      createdAt     datetime,
-      loginId       varchar(255),
-      loginPw       varchar(255),
+      username      varchar(255),
+      password      varchar(255),
       name          varchar(255),
       role          varchar(255),
       status        varchar(255),
       updatedAt     datetime,
+      createdAt     datetime,
       primary key (id)
 );
 
