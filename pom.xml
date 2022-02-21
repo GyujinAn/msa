@@ -15,6 +15,7 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
+        <module>portal-user</module>
         <module>cloud-service-api</module>
         <module>cloud-member-api</module>
         <module>cloud-auth</module>
