@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Portal</title>
+</head>
+
+<body>
+<h1>
+    Welcome to cloud management platform
+</h1>
+
+<img th:src="@{images/hello-world.png}"/>
+
+<!--<form method="POST" th:action="@{/authorize}" id="logoutForm">-->
+<!--    <input type="submit" value="login"/>-->
+<!--</form>-->
+
+<a th:href="@{/authorize}" id="authorize">login</a>
+<a th:href="@{/service}" id="service">service</a>
+<a th:href="@{/support}" id="support">support</a>
+<a th:href="@{/myaccount}" id="myaccount">myaccount</a>
+
+</body>
+</html>

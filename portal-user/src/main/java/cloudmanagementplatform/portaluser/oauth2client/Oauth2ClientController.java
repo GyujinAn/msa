@@ -48,7 +48,7 @@ public class Oauth2ClientController {
                            @Value("${authorization.client-id}")String clientId,
                            @Value("${authorization.client-secret}")String clientSecret,
                            @Value("${authorization.redirect-uri}")String redirectUri,
-                           HttpServletRequest httpServletRequest,
+                           HttpSession session,
                            HttpServletResponse httpServletResponse) throws IOException {
 
         String credential = clientId + ":" + clientSecret;
@@ -71,14 +71,13 @@ public class Oauth2ClientController {
                 .block();
 
         if(response.statusCode().value() != 200){
-            httpServletResponse.sendRedirect("hello");
+            httpServletResponse.sendRedirect("/error.html");
         }else {
-            httpServletResponse.sendRedirect("hellohahah");
+            httpServletResponse.sendRedirect("/index.html");
         }
 
         Map<String, String> res = response.bodyToMono(Map.class).block();
 
-        HttpSession session = httpServletRequest.getSession();
         session.setAttribute("access_token", res.get("access_token"));
         session.setAttribute("token_type", res.get("token_type"));
         session.setAttribute("refresh_token", res.get("refresh_token"));
