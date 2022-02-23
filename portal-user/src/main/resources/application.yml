@@ -1,0 +1,12 @@
+server:
+  port: 8002
+
+logging:
+  level:
+    root: debug
+
+authorization:
+  base-uri: http://localhost:9001
+  client-id: foo
+  client-secret: bar
+  redirect-uri: http://localhost:8002/callback

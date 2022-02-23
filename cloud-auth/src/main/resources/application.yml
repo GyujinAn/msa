@@ -1,3 +1,6 @@
+server:
+  port: 9001
+
 spring:
   datasource:
     url: jdbc:mariadb://localhost:3306/cloud_member
@@ -22,10 +25,6 @@ spring:
       base-path: /api
       default-page-size: 10
       max-page-size: 10
-
-
-server:
-  port: 9000
 
 logging:
   level:

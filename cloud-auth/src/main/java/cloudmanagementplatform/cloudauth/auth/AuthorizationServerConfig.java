@@ -23,7 +23,12 @@ import javax.sql.DataSource;
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
-//
+    @Override
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+        super.configure(endpoints);
+    }
+
+    //
 //    private final DataSource dataSource;
 //
 ////    private final PasswordEncoder passwordEncoder;
@@ -36,7 +41,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         clients.inMemory()
                 .withClient("foo")
                 .secret("bar")
-                .redirectUris("http://localhost:8080/test/auth")
+                .redirectUris("http://localhost:8002/callback","http://localhost:8080")
                 .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token")
                 .scopes("read", "write", "email", "profile")
                 .accessTokenValiditySeconds(30000)
