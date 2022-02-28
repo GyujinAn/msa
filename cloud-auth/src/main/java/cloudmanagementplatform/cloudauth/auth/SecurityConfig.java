@@ -12,6 +12,10 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.provider.token.TokenStore;
+import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
+
+import javax.sql.DataSource;
 
 /**
  * @author agj017@gmail.com
@@ -25,6 +29,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //    private final CloudAuthenticationProvider cloudAuthenticationProvider;
 
     private final CloudMemberService memberService;
+
+    private final DataSource dataSource;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -58,5 +64,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
+    }
+
+    @Bean
+    public TokenStore jdbcTokenStore() {
+        return new JdbcTokenStore(dataSource);
     }
 }
