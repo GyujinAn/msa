@@ -13,6 +13,7 @@ public class MyPasswordEncoder {
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         System.out.printf("admin : %s\n", passwordEncoder.encode("admin"));
         System.out.printf("user : %s\n", passwordEncoder.encode("user"));
+        System.out.printf("bar : %s\n", passwordEncoder.encode("bar"));
 
 
     }

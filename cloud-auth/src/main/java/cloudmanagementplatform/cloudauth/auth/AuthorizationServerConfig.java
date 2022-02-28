@@ -23,39 +23,29 @@ import javax.sql.DataSource;
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
-//
-//    private final DataSource dataSource;
-//
+
     private final PasswordEncoder passwordEncoder;
-//
-////    private final AuthenticationManager authenticationManager;
-//
+
+    private final DataSource dataSource;
+
+    private final TokenStore jdbcTokenStore;
+
+    private final AuthenticationManager authenticationManager;
+
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
-        clients.inMemory()
-                .withClient("foo")
-                .secret(passwordEncoder.encode("bar"))
-                .redirectUris("http://localhost:8002/callback","http://localhost:8080")
-                .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token")
-                .scopes("read", "write", "email", "profile")
-                .accessTokenValiditySeconds(30000)
-                .refreshTokenValiditySeconds(90000);
-
-//        clients.jdbc(dataSource).passwordEncoder(passwordEncoder);
+        clients
+                .jdbc(dataSource)
+                .passwordEncoder(passwordEncoder);
 
     }
 
-    @Bean
-    public TokenStore JdbcTokenStore(DataSource dataSource) {
-        return new JdbcTokenStore(dataSource);
+    @Override
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+        endpoints
+                .authenticationManager(authenticationManager)
+                .tokenStore(jdbcTokenStore);
     }
-//
-//    @Override
-//    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-////        endpoints.authenticationManager(authenticationManager).
-////                tokenStore(new JdbcTokenStore(dataSource));
-//    }
-
 
 }
