@@ -35,3 +35,6 @@ logging:
 #        security: DEBUG
     org.hibernate.SQL: debug
     org.hibernate.type: trace
+
+oauth2:
+  jwt-key: helloworld

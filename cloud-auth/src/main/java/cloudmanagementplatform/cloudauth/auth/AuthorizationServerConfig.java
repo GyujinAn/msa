@@ -1,6 +1,7 @@
 package cloudmanagementplatform.cloudauth.auth;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -10,7 +11,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 import javax.sql.DataSource;
 
@@ -28,9 +30,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     private final DataSource dataSource;
 
-    private final TokenStore jdbcTokenStore;
-
     private final AuthenticationManager authenticationManager;
+
+    @Value("${oauth2.jwt-key}")
+    private String jwtKey;
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
@@ -45,7 +48,21 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints
                 .authenticationManager(authenticationManager)
-                .tokenStore(jdbcTokenStore);
+                .accessTokenConverter(jwtAccessTokenConverter());
+    }
+
+    @Bean
+    public JwtAccessTokenConverter jwtAccessTokenConverter() {
+
+        JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
+        jwtAccessTokenConverter.setSigningKey(jwtKey);
+
+        return jwtAccessTokenConverter;
+    }
+
+    @Bean
+    public TokenStore jwtTokenStore() {
+        return new JwtTokenStore(jwtAccessTokenConverter());
     }
 
 }
