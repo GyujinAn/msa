@@ -11,7 +11,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.PostLoad;
+import javax.persistence.TypedQuery;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,13 +28,19 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class CloudMemberServiceImpl implements CloudMemberService {
 
-    private final CloudMemberRepository cloudMemberRepository;
+//    private final CloudMemberRepository cloudMemberRepository;
+
+    private final EntityManagerFactory entityManagerFactory;
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
 
-        Optional<CloudMember> byUsername = cloudMemberRepository.findByUsername(s);
-        CloudMember cloudMember = byUsername.orElse(null);
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        TypedQuery<CloudMember> query = entityManager.createQuery("SELECT m from CloudMember m where m.username='"+s+"'", CloudMember.class);
+        CloudMember cloudMember = query.getSingleResult();
+
+//        CloudMember cloudMember = cloudMemberRepository.findByUsername(s);
+
 
         if(cloudMember == null) {
             throw new UsernameNotFoundException("User " + s + "not found");

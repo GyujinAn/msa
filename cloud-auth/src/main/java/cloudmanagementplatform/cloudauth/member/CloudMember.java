@@ -31,11 +31,11 @@ public class CloudMember implements UserDetails {
 
     private String name;
 
-    @Enumerated(EnumType.STRING)
-    private MemberStatus status;
-
-    @Enumerated(EnumType.STRING)
-    private MemberRole role;
+//    @Enumerated(EnumType.STRING)
+//    private MemberStatus status;
+//
+//    @Enumerated(EnumType.STRING)
+//    private MemberRole role;
 
     private LocalDateTime updatedAt;
 
@@ -43,7 +43,9 @@ public class CloudMember implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Arrays.asList(new SimpleGrantedAuthority(role.toString()));
+//        return Arrays.asList(new SimpleGrantedAuthority(role.toString()));
+
+        return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
     }
 
     @Override

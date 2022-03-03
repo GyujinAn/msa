@@ -26,6 +26,17 @@ spring:
       default-page-size: 10
       max-page-size: 10
 
+security:
+  user:
+    name: user
+    password: test
+  oauth2:
+    client:
+      client-id: foo
+      client-secret: bar
+    authorization:
+      token-key-access: isAuthenticated()
+
 logging:
   level:
     root: debug
