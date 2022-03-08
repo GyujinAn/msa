@@ -31,15 +31,16 @@ spring:
               - Access-Control-Expose-Headers
             allow-credentials: true
       routes:
-        - id: admin-api
+        - id: protected-resource-api
           uri: http://localhost:8080/
           predicates:
-            - Path=/admin/api/**
-#          filters:
-#            - Authorization
-#              args:
-#                preFilter: true
-#                postFilter: true
+            - Path=/api/**
+          filters:
+            - JwtValidation
+              args:
+                publicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAibsSqp+vuea8/EtRp7bOV5bBq1mWbAt1AE35l506LBJFFHEy9LWayYXhNnlQNWGifPF0cTKm72m/uj4IogB9nkWnd8ZgH0n6bN2oFxpwHBP46YU7YlAyxKys/loobW/JzAJr54qPS5B/GYxf4GNPvsIdbJoQs/R+RUq7S1rGDltnEKArWHXsSb2B6Iw934GXDiutwwoG4fvNzJBxswmtppjvcJWaYTYJ/m8ungj9vhzcr2Y2gEg++R+7YbcYNqnNf6X4fqNX3J5o3t2RhPwHOODnPZLVqkzSSNDwSxlXvCA4T2NnfSbUTzFBMKp1PYqiFsJi16VQOa0ePbud2FCSDQIDAQAB
+                preFilter: true
+                postFilter: true
         - id: user-api
           uri: http://localhost:8081/
           predicates:

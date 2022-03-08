@@ -18,8 +18,6 @@ public class AccountController {
     @GetMapping("/account")
     public String getAccount(HttpSession session, Model model){
 
-
-
         return "myaccount";
     }
 
