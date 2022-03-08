@@ -17,17 +17,7 @@ spring:
               - OPTIONS
               - DELETE
             allowedHeaders:
-              - Context-Type
-              - Content-Type
-              - Accept
-              - X-Requested-With
-              - remember-me
-              - Content-Disposition
               - Authorization
-              - ssoKey
-              - session
-              - newToken
-              - access-token
               - Access-Control-Expose-Headers
             allow-credentials: true
       routes:
@@ -41,15 +31,6 @@ spring:
                 publicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAibsSqp+vuea8/EtRp7bOV5bBq1mWbAt1AE35l506LBJFFHEy9LWayYXhNnlQNWGifPF0cTKm72m/uj4IogB9nkWnd8ZgH0n6bN2oFxpwHBP46YU7YlAyxKys/loobW/JzAJr54qPS5B/GYxf4GNPvsIdbJoQs/R+RUq7S1rGDltnEKArWHXsSb2B6Iw934GXDiutwwoG4fvNzJBxswmtppjvcJWaYTYJ/m8ungj9vhzcr2Y2gEg++R+7YbcYNqnNf6X4fqNX3J5o3t2RhPwHOODnPZLVqkzSSNDwSxlXvCA4T2NnfSbUTzFBMKp1PYqiFsJi16VQOa0ePbud2FCSDQIDAQAB
                 preFilter: true
                 postFilter: true
-        - id: user-api
-          uri: http://localhost:8081/
-          predicates:
-            - Path=/user/api/**
-        - id: dashboard-api
-          uri: http://localhost:8090/
-          predicates:
-            - Path=/dashboard/api/**
-
 
   datasource:
     url: jdbc:mariadb://localhost:3306/cloud_member
