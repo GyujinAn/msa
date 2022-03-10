@@ -1,2 +1,28 @@
 server:
-  port: 9002
+  port: 8003
+
+spring:
+  data:
+    rest:
+      base-path: /api
+
+  datasource:
+    url: jdbc:mariadb://localhost:3306/cloud_service
+    username: root
+    password:
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        #        show_sql: true
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+logging:
+  level:
+    root: debug
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
