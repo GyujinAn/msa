@@ -23,7 +23,7 @@ public class ServiceApiInit implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         CloudProvider cloudProvider = new CloudProvider();
-        cloudProvider.setName("local");
+        cloudProvider.setName("local-k8s");
         providerRepository.save(cloudProvider);
 
         Computing computing = new Computing();

@@ -1,4 +1,4 @@
-package cloudmanagementplatform.portaluser.oauth2client;
+package cloudmanagementplatform.portaluser.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +15,15 @@ public class WebClientConfig {
 
     @Bean
     public WebClient oauthWebClient(@Value("${authorization.base-uri}")String baseUrl){
+
+        return WebClient.builder()
+                .baseUrl(baseUrl)
+                .build();
+
+    }
+
+    @Bean
+    public WebClient serviceApiWebClient(@Value("${api.service.base-uri}")String baseUrl){
 
         return WebClient.builder()
                 .baseUrl(baseUrl)
