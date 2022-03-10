@@ -6,7 +6,7 @@ logging:
     root: debug
 
 authorization:
-  base-uri: http://localhost:9001
-  client-id: foo
-  client-secret: bar
+  base-uri: http://localhost:8080
+  client-id: portal-user-client
+  client-secret: 8d522834-31c4-40ad-a8ce-96618940bc12
   redirect-uri: http://localhost:8002/callback

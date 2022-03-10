@@ -9,13 +9,23 @@
 
 <body>
 <h1>
-    My account
+    account
 </h1>
+<table>
+    <tr>
+        <th>이름</th>
+        <th>로그인ID</th>
+        <th>이메일</th>
+    </tr>
 
-<!--<form method="POST" th:action="@{/authorize}" id="logoutForm">-->
-<!--    <input type="submit" value="login"/>-->
-<!--</form>-->
+    <tr>
+        <td th:text="${userVo.name}"></td>
+        <td th:text="${userVo.id}"></td>
+        <td th:text="${userVo.email}"></td>
+    </tr>
+</table>
 
+<br>
 <a th:href="@{/authorize}" id="authorize">login</a>
 <a th:href="@{/service}" id="service">service</a>
 <a th:href="@{/support}" id="support">support</a>
