@@ -1,0 +1,62 @@
+pipeline {
+    agent {
+        kubernetes {
+            yamlFile 'JenkinsPods.yaml'
+        }
+    }
+    environment {
+        REPOSITORY = 'harbor.okestro.cld/klid'
+        TAG = 'latest'
+        APP = 'cloud-cmpapigateway'
+        APP_PATH = 'CloudGateway'
+        NAMESPACE = 'klid-cmp'
+        PROFILE = 'dev'
+    }
+    stages {
+        stage('Maven Build') {
+            steps {
+                    container('maven-jdk-node'){
+                        sh '''
+                            cd $APP_PATH
+                            mvn -v
+                            mvn -P $PROFILE -f pom.xml clean package
+                            ls -al ./target
+                            pwd
+                        '''
+                }
+            }
+        }
+        stage('Build Docker Image'){
+            steps {
+                container('docker'){
+                   sh '''
+                    docker --version
+                    ls
+                    docker build -t $REPOSITORY/$APP:$TAG ./$APP_PATH
+                    docker images
+                    '''
+                }
+            }
+        }
+        stage('Push Docker Image') {
+            steps {
+                container('docker'){
+                     sh '''
+                        docker login $REPOSITORY -u admin  -p okestro2018
+                        docker push $REPOSITORY/$APP:$TAG
+                        '''
+                }
+            }
+        }
+        stage("kubectl deploy"){
+            steps {
+                container('kubectl'){
+                      sh '''
+                        kubectl rollout restart deployment $APP -n $NAMESPACE
+                        kubectl get pod -n $NAMESPACE
+                        '''
+                }
+            }
+        }
+    }   // End of stages
+} // End of pipeline

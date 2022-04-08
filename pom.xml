@@ -16,10 +16,10 @@
 
     <modules>
         <module>portal-user</module>
-        <module>cloud-service-api</module>
-        <module>cloud-member-api</module>
-        <module>cloud-auth</module>
-        <module>cloud-gateway</module>
+        <module>cmp-service-api</module>
+        <module>cmp-member-api</module>
+        <module>cmp-auth</module>
+        <module>cmp-api-gateway</module>
     </modules>
 
     <dependencies>
