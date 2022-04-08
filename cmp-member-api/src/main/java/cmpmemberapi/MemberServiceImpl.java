@@ -36,8 +36,8 @@ public class MemberServiceImpl implements MemberService{
 
     @Transactional
     @Override
-    public Long save(MemberTO memberTO) {
-        Member member = memberTO.toEntity();
+    public Long save(MemberDto memberDto) {
+        Member member = memberDto.toEntity();
         member.setCreatedAt(LocalDateTime.now());
         member.setUpdatedAt(LocalDateTime.now());
 
