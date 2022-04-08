@@ -1,0 +1,6 @@
+2021-12-28 11:04:44,081 WARN  [org.keycloak.events] (default task-1) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-28 11:05:33,971 WARN  [org.keycloak.events] (default task-1) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-28 11:11:19,864 WARN  [org.keycloak.events] (default task-2) type=LOGIN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_client_credentials, grant_type=password
+2021-12-28 11:11:28,301 WARN  [org.keycloak.events] (default task-2) type=LOGIN_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_client_credentials, grant_type=password
+2021-12-28 11:11:56,580 WARN  [org.keycloak.events] (default task-2) type=LOGIN_ERROR, realmId=demo, clientId=demo-client2, userId=null, ipAddress=127.0.0.1, error=invalid_client_credentials, grant_type=password
+2021-12-28 11:12:26,736 WARN  [org.keycloak.events] (default task-2) type=USER_INFO_REQUEST_ERROR, realmId=master, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token

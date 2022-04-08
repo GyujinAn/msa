@@ -1,0 +1,64 @@
+2021-12-29 15:20:02,632 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:04,995 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:05,932 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:08,004 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:09,783 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:11,678 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:16,484 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:17,882 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:19,148 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:20,270 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:21,508 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:20:58,425 WARN  [org.keycloak.events] (default task-29) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:28:29,626 WARN  [org.keycloak.events] (default task-29) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:29:14,850 WARN  [org.keycloak.events] (default task-29) type=LOGIN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_client_credentials, grant_type=password
+2021-12-29 15:30:51,408 WARN  [org.keycloak.events] (default task-34) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:30:52,151 WARN  [org.keycloak.events] (default task-34) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:30:52,738 WARN  [org.keycloak.events] (default task-34) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:30:54,101 WARN  [org.keycloak.events] (default task-34) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:37:46,431 WARN  [org.keycloak.events] (default task-35) type=USER_INFO_REQUEST_ERROR, realmId=demo, clientId=null, userId=null, ipAddress=127.0.0.1, error=invalid_token, auth_method=validate_access_token
+2021-12-29 15:38:41,436 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:38:42,627 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:38:45,001 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:38:47,325 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:38:47,997 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:38:48,416 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:38:49,073 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:38:51,213 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:38:52,349 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:38:53,945 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:38:58,315 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 15:39:00,648 WARN  [org.keycloak.events] (default task-35) type=REFRESH_TOKEN_ERROR, realmId=demo, clientId=demo-client, userId=null, ipAddress=127.0.0.1, error=invalid_token, grant_type=refresh_token, client_auth_method=client-secret
+2021-12-29 19:04:47,059 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0272: Suspending server
+2021-12-29 19:04:47,382 INFO  [org.jboss.as.ejb3] (Thread-2) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2021-12-29 19:04:47,517 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2021-12-29 19:04:48,416 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0010: Unbound data source [java:jboss/datasources/KeycloakDS]
+2021-12-29 19:04:48,426 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2021-12-29 19:04:48,454 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 58) WFLYUT0022: Unregistered web context: '/auth' from server 'default-server'
+2021-12-29 19:04:48,466 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTPS listener https suspending
+2021-12-29 19:04:48,507 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8543
+2021-12-29 19:04:48,702 INFO  [org.keycloak.subsystem.server.extension.KeycloakProviderDeploymentProcessor] (MSC service thread 1-6) Undeploying Keycloak provider: authz-js-policies.jar
+2021-12-29 19:04:48,864 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0028: Stopped deployment authz-js-policies.jar (runtime-name: authz-js-policies.jar) in 1058ms
+2021-12-29 19:04:48,876 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2021-12-29 19:04:48,909 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2021-12-29 19:04:48,998 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0019: Host default-host stopping
+2021-12-29 19:04:49,072 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0028: Stopped deployment keycloak-server.war (runtime-name: keycloak-server.war) in 1326ms
+2021-12-29 19:04:49,183 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 78) WFLYCLINF0003: Stopped actionTokens cache from keycloak container
+2021-12-29 19:04:49,183 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 72) WFLYCLINF0003: Stopped offlineClientSessions cache from keycloak container
+2021-12-29 19:04:49,184 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 79) WFLYCLINF0003: Stopped keys cache from keycloak container
+2021-12-29 19:04:49,183 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 70) WFLYCLINF0003: Stopped sessions cache from keycloak container
+2021-12-29 19:04:49,184 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 77) WFLYCLINF0003: Stopped authenticationSessions cache from keycloak container
+2021-12-29 19:04:49,183 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 80) WFLYCLINF0003: Stopped loginFailures cache from keycloak container
+2021-12-29 19:04:49,184 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 71) WFLYCLINF0003: Stopped work cache from keycloak container
+2021-12-29 19:04:49,184 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 74) WFLYCLINF0003: Stopped clientSessions cache from keycloak container
+2021-12-29 19:04:49,184 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 69) WFLYCLINF0003: Stopped offlineSessions cache from keycloak container
+2021-12-29 19:04:49,231 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 58) WFLYCLINF0003: Stopped authorization cache from keycloak container
+2021-12-29 19:04:49,231 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 73) WFLYCLINF0003: Stopped users cache from keycloak container
+2021-12-29 19:04:49,266 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 75) WFLYCLINF0003: Stopped realms cache from keycloak container
+2021-12-29 19:04:49,297 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTP listener default suspending
+2021-12-29 19:04:49,290 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 75) Stopping cache manager null on null
+2021-12-29 19:04:49,317 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8180
+2021-12-29 19:04:49,331 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0004: Undertow 2.2.5.Final stopping
+2021-12-29 19:04:49,899 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 76) WFLYCLINF0003: Stopped http-remoting-connector cache from ejb container
+2021-12-29 19:04:49,901 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 76) Stopping cache manager null on null
+2021-12-29 19:04:49,942 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0050: Keycloak 15.0.2 (WildFly Core 15.0.1.Final) stopped in 2175ms

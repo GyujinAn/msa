@@ -33,7 +33,7 @@ spring:
                 postFilter: true
 
   datasource:
-    url: jdbc:mariadb://localhost:3306/cloud_member
+    url: jdbc:mariadb://localhost:3306/cmp_member
     username: root
     password:
     driver-class-name: org.mariadb.jdbc.Driver
@@ -41,7 +41,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create-drop
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
@@ -50,9 +50,9 @@ spring:
         format_sql: true
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 
-  sql:
-    init:
-      mode: always
+#  sql:
+#    init:
+#      mode: always
 
 
 logging:
