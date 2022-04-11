@@ -1,5 +1,6 @@
 package cmpmemberapi;
 
+import cmpmemberapi.domain.Member;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,8 +21,8 @@ public class MemberDto {
 
     private LocalDateTime regDt;
 
-    public Member toEntity() {
-        return new Member(id, name, account, password);
-    }
+//    public Member toEntity() {
+//        return new Member(id, name, account, password);
+//    }
 
 }

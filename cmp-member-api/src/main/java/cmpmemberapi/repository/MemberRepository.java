@@ -1,5 +1,6 @@
-package cmpmemberapi;
+package cmpmemberapi.repository;
 
+import cmpmemberapi.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
