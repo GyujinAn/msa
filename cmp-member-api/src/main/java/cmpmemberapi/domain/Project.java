@@ -1,6 +1,8 @@
 package cmpmemberapi.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Builder;
+import lombok.Getter;
 
 import javax.persistence.*;
 import java.util.List;
@@ -11,6 +13,7 @@ import java.util.List;
  */
 
 @Entity
+@Getter
 public class Project extends BaseTimeEntity{
     @Id
     @Column(name = "PROJECT_ID")

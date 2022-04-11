@@ -1,5 +1,6 @@
-package cmpmemberapi;
+package cmpmemberapi.service;
 
+import cmpmemberapi.MemberDto;
 import cmpmemberapi.domain.Member;
 import cmpmemberapi.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +16,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService{
 
-    private MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
 
     @Override
     public Long save(MemberDto memberDto) {
@@ -23,9 +24,9 @@ public class MemberServiceImpl implements MemberService{
     }
 
     @Override
-    public Member getMember(Long memberId) {
+    public Member getMember(String memberId) {
 
-        Optional<Member> byId = memberRepository.findById(memberId);
+        Optional<Member> byId = memberRepository.findById(Long.parseLong(memberId));
 
         return byId.get();
     }

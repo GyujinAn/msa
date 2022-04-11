@@ -1,6 +1,7 @@
 package cmpmemberapi.domain;
 
 import lombok.Builder;
+import lombok.Getter;
 
 import javax.persistence.*;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  */
 
 @Entity
+@Getter
 public class Organization extends BaseTimeEntity{
 
     @Id
