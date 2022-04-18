@@ -25,7 +25,6 @@ import static org.junit.Assert.*;
 @Transactional
 public class MemberServiceImplTest {
 
-
     @Autowired
     MemberService memberService;
 
@@ -35,16 +34,14 @@ public class MemberServiceImplTest {
     @Test
     public void getMember() {
         //given
-        Member admin = memberRepository.findByAccount("admin").get();
+
 
 
         //when
-        Member member = memberService.getMember(admin.getId().toString());
-        List<Organization> organizations = member.getOrganizations();
-        List<Project> projects = member.getProjects();
+
 
         //then
-        assertEquals(admin.getId(), member.getId());
+
 
 
 

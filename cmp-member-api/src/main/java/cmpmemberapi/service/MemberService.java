@@ -1,11 +1,19 @@
 package cmpmemberapi.service;
 
 
-import cmpmemberapi.MemberDto;
-import cmpmemberapi.domain.Member;
+import cmpmemberapi.dto.MemberDto;
 
 public interface MemberService {
-    Long save(MemberDto memberDto);
 
-    Member getMember(String memberId);
+    Long saveMember(MemberDto memberDto);
+
+    Long updateMember(String memberId, MemberDto memberDto);
+
+    MemberDto findMember(String memberId);
+
+    MemberDto findMembers();
+
+    boolean deleteMember();
+
 }
+

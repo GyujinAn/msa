@@ -73,8 +73,8 @@ public class LocalStartedEvent implements ApplicationListener<ApplicationStarted
         Member admin = Member.builder()
                 .account("admin")
                 .password("no support")
-                .name("관리자")
-                .memberRole(MemberRole.ROLE_ADMIN)
+                .name("cmp platform admin")
+                .memberRole(MemberRole.PLATFORM_ADMIN)
                 .organizations(organizations)
                 .projects(projects)
                 .build();

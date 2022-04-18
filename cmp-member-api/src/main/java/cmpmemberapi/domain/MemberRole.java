@@ -5,5 +5,5 @@ package cmpmemberapi.domain;
  * @since 2022/04/11
  */
 public enum MemberRole {
-    ROLE_ADMIN, ROLE_USER
+    PLATFORM_ADMIN, ORGANIZATION_ADMIN, PROJECT_MANAGER, PROJECT_MEMBER
 }
