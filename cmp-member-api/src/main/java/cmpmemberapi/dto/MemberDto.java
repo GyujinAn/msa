@@ -17,9 +17,4 @@ public class MemberDto {
 
     private String password;
 
-    private LocalDateTime lastAccessDt;
-
-    private LocalDateTime regDt;
-
-
 }

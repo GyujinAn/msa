@@ -27,9 +27,13 @@ public class Member extends BaseTimeEntity {
     @Column(length = 255, nullable = false)
     private String password;
 
+    @ManyToMany
     @Column
-    @Enumerated(EnumType.STRING)
-    private MemberRole memberRole;
+    @JoinTable(name = "MEMBER_ROLE",
+            joinColumns = @JoinColumn(name = "MEMBER_ID"),
+            inverseJoinColumns = @JoinColumn(name = "ROLES_ID")
+    )
+    private List<Roles> roles = new ArrayList<>();
 
     @ManyToMany
     @Column
@@ -38,7 +42,6 @@ public class Member extends BaseTimeEntity {
             inverseJoinColumns = @JoinColumn(name = "ORGANIZATION_ID")
     )
     private List<Organization> organizations = new ArrayList<>();
-
 
     @ManyToMany
     @Column
@@ -52,12 +55,12 @@ public class Member extends BaseTimeEntity {
     }
 
     @Builder
-    public Member(Long id, String name, String account, String password, MemberRole memberRole, List<Organization> organizations, List<Project> projects) {
+    public Member(Long id, String name, String account, String password, List<Roles> roles, List<Organization> organizations, List<Project> projects) {
         this.id = id;
         this.name = name;
         this.account = account;
         this.password = password;
-        this.memberRole = memberRole;
+        this.roles = roles;
         this.organizations = organizations;
         this.projects = projects;
     }

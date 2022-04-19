@@ -5,7 +5,7 @@ import cmpmemberapi.dto.MemberDto;
 
 public interface MemberService {
 
-    Long saveMember(MemberDto memberDto);
+    Long saveMember(MemberDto memberDto) throws Exception;
 
     Long updateMember(String memberId, MemberDto memberDto);
 

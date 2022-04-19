@@ -2,6 +2,7 @@ package cmpmemberapi.configuration;
 
 import cmpmemberapi.domain.Member;
 import cmpmemberapi.repository.MemberRepository;
+import cmpmemberapi.repository.MemberRoleRepository;
 import cmpmemberapi.service.KeycloakDecorator;
 import cmpmemberapi.service.MemberService;
 import cmpmemberapi.service.MemberServiceImpl;
@@ -27,9 +28,12 @@ public class LocalKeycloakConfiguration {
     @Autowired
     MemberService memberService;
 
+    @Autowired
+    MemberRoleRepository memberRoleRepository;
+
     @Bean
-    MemberService memberServiceWithKeycloak(){
-        return new KeycloakDecorator(memberService, keycloakWebClient(), oidcProperties);
+    MemberService memberService(){
+        return new KeycloakDecorator(memberService, keycloakWebClient(), oidcProperties, memberRoleRepository);
     }
 
     @Bean

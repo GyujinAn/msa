@@ -1,7 +1,6 @@
 package cmpmemberapi;
 
 import cmpmemberapi.domain.Member;
-import cmpmemberapi.domain.MemberRole;
 import cmpmemberapi.domain.Organization;
 import cmpmemberapi.domain.Project;
 import cmpmemberapi.repository.MemberRepository;
@@ -74,7 +73,7 @@ public class LocalStartedEvent implements ApplicationListener<ApplicationStarted
                 .account("admin")
                 .password("no support")
                 .name("cmp platform admin")
-                .memberRole(MemberRole.PLATFORM_ADMIN)
+//                .memberRole(MemberRole123.PLATFORM_ADMIN)
                 .organizations(organizations)
                 .projects(projects)
                 .build();
