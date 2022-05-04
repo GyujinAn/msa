@@ -1,4 +1,4 @@
-package cloudmanagementplatform.portaluser;
+package portaluser;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

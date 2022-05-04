@@ -1,16 +1,6 @@
 server:
   port: 8002
 
-logging:
-  level:
-    root: debug
-
-authorization:
-  base-uri: http://localhost:8080
-  client-id: portal-user-client
-  client-secret: 8d522834-31c4-40ad-a8ce-96618940bc12
-  redirect-uri: http://localhost:8002/callback
-
-api:
-  service:
-    base-uri: http://localhost:8003
+spring:
+  profiles:
+    active: local
